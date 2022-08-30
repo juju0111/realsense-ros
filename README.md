@@ -1,4 +1,4 @@
-download :: git clone -b juju-devel --single-branch 
+download >>> git clone -b juju-devel --single-branch https://github.com/juju0111/realsense-ros.git
 
 # ROS Wrapper for Intel&reg; RealSense&trade; Devices
 These are packages for using Intel RealSense cameras (D400 series SR300 camera and T265 Tracking Module) with ROS.
