@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot name="realsense2_camera" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+
+  <link name="camera_base" />
+
+  <joint name="camera_coupler_joint" type="fixed">
+    <origin xyz="-0.1 0 0.03" rpy="0 ${-pi/2+0.05} 0" />
+    <parent link="link6"/>
+    <child link="camera_base"/>
+  </joint>
+
+  <xacro:sensor_d435 name="camera" topics_ns="camera" parent="camera_base" publish_pointcloud="true">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:sensor_d435>  
+</robot>
